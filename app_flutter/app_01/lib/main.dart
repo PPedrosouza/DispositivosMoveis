@@ -15,18 +15,29 @@ class MyApp extends StatelessWidget {
 
   MaterialApp newMethod() {
     return MaterialApp(
-    title: 'Flutter Demo',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
-    ),
-    home: Scaffold(
-      appBar: AppBar(
-        title: const Text("Welcome to Flutter"),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      body: Container(
-        child: const Text("Hello World!"),
-      ),
-    ),//alt+shift+f
-  );
+
+      home: HomePage(), //alt+shift+f*/
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Welcome to Flutter"),
+        ),
+        body: const Center(
+          child: Text("Hello World!"),
+        ),
+      );
   }
 }
